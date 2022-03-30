@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func calculateSide(length1, length2, angle float64) float64 {
-
 	//Insert the code here
+	length3 := math.Sqrt((length1 * length1) + (length2 * length2) - (2 * length1 * length2 * math.Cos(angle)))
 
 	//Do not remove this line
 	fmt.Println("The 3rd length of the triange is", length3)
@@ -18,11 +19,11 @@ func main() {
 	var length2 float64
 	var angle float64
 
-	fmt.Println("Enter the first length of the triangle: ")
+	fmt.Printf("Enter the first length of the triangle: ")
 	fmt.Scanln(&length1)
-	fmt.Println("Enter the second length of the triangle: ")
+	fmt.Printf("Enter the second length of the triangle: ")
 	fmt.Scanln(&length2)
-	fmt.Println("Enter the angle between the two lengths: ")
+	fmt.Printf("Enter the angle between the two lengths: ")
 	fmt.Scanln(&angle)
 
 	calculateSide(length1, length2, angle)
